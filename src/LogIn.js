@@ -32,7 +32,7 @@ const LogIn = ({
     axios({
       method: "post",
       url: "https://insta.nextacademy.com/api/v1/login",
-      data: { username: "Boyeeeee", password: "123123123" }
+      data: { username: username, password: password }
     })
       .then(result => {
         console.log(result.data);
@@ -111,9 +111,9 @@ const LogIn = ({
           <button
             className="Sign-up-btn"
             onClick={handleSubmit}
-            // disabled={
-            //   username.length < 1 || password.length < 8 || loading === true
-            // }
+            disabled={
+              username.length < 1 || password.length < 8 || loading === true
+            }
           >
             {loading ? "Logging in..." : "Log in"}
           </button>
