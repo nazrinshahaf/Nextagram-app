@@ -11,7 +11,7 @@ function App() {
   const [showSignUp, setShowSignUp] = useState(false);
   const [showLogIn, setShowLogIn] = useState(false);
   const [showUploadImage, setShowUploadImage] = useState(false);
-  const [showCommentSection, setShowCommentSection] = useState(false);
+  const [showCommentSection, setShowCommentSection] = useState(true);
 
   const [isLoggedIn, setIsLoggedIn] = useState(
     localStorage.getItem("JWT") !== null
@@ -20,11 +20,17 @@ function App() {
 
   const [users, setUsers] = useState([]);
 
-  if (showSignUp === true || showLogIn === true || showUploadImage === true) {
+  if (
+    showSignUp === true ||
+    showLogIn === true ||
+    showUploadImage === true ||
+    showCommentSection === true
+  ) {
     document.body.style.overflow = "hidden";
   }
 
   if (
+    showCommentSection === false &&
     showSignUp === false &&
     showLogIn === false &&
     showUploadImage === false

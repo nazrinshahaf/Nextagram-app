@@ -5,12 +5,14 @@ import { Link } from "react-router-dom";
 import UserImages from "./UserImages";
 import LoadingCircle from "./LoadingCircle";
 import UserComment from "./UserComment";
+import CommentSectoin from "./CommentSection";
 
 import LikeIcon from "./like_icon2.png";
 import CommentIcon from "./comment_icon.png";
 
 import "./HomePage.css";
 import "./LoggedInInformation.css";
+import CommentSection from "./CommentSection";
 
 const HomePage = ({
   users,
@@ -26,6 +28,11 @@ const HomePage = ({
     "loggedInUserProfileImage"
   );
   let loggedInUserUsername = localStorage.getItem("loggedInUserUsername");
+
+  const handleCommentView = () => {
+    setShowCommentSection(!showCommentSection);
+  };
+  console.log(showCommentSection, "CommentSectonShow");
 
   useEffect(() => {
     axios
@@ -45,6 +52,16 @@ const HomePage = ({
 
   return (
     <div>
+      {showCommentSection === true ? (
+        <CommentSection
+          users={users}
+          setUsers={setUsers}
+          setShowCommentSection={setShowCommentSection}
+        />
+      ) : (
+        <div></div>
+      )}
+
       {isLoggedIn ? (
         <div className="LoggedInInformation">
           <div className="LoggedInUserImageContainer">
@@ -119,7 +136,9 @@ const HomePage = ({
                     src={LikeIcon}
                     className="Comment-section-like-icon"
                   ></img>
+                  {/* <Link exact to={`/`} ></Link> */}
                   <img
+                    onClick={handleCommentView}
                     src={CommentIcon}
                     className="Comment-section-comment-icon"
                   ></img>

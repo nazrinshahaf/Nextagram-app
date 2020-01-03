@@ -1,0 +1,94 @@
+.Comment-section-container {
+  border-color: lightgray;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  width: 65vw;
+  height: 80vh;
+  position: fixed;
+  background-color: white;
+  z-index: 5;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.Comment-section-image-container {
+  width: 65%;
+  height: 100%;
+}
+.Comment-section-comment-container {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.Comment-section-user-container {
+  height: 15%;
+  border-bottom: lightgray solid 1px;
+  border-left: lightgray solid 1px;
+}
+.Comment-section-comment {
+  height: 62%;
+  border-bottom: lightgray solid 1px;
+  border-left: lightgray solid 1px;
+}
+.Comment-section-profile-bar {
+  height: 15%;
+  border-bottom: lightgray solid 1px;
+  border-left: lightgray solid 1px;
+}
+.Comment-section-user-input {
+  height: 8%;
+  border-left: lightgray solid 1px;
+}
+.Comment-section-post-btn {
+  border: none;
+  padding: 0;
+  margin: 0 5px 0 0;
+  color: #3897f0;
+  font-size: 0.9em;
+}
+.Comment-section-post-btn {
+  cursor: pointer;
+}
+.Comment-section-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 3vh 0 0vh 1.5vw;
+}
+.Comment-section-li {
+  margin: 0 0 3vh 0;
+}
+.Comment-section-box {
+  display: flex;
+  flex-direction: row;
+}
+.Comment-section-poster-profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.Comment-section-content {
+  margin: 0.5vh 0 0 1vw;
+}
+.Comment-section-comment-time {
+  margin: 0 0 0 3.2vw;
+  font-size: 0.85em;
+  color: #444444;
+}
+.Comment-section-icons {
+  width: 28px;
+  height: 28px;
+  margin: 1vh 0.15vw 0 0.5vw;
+  cursor: pointer;
+}
+#bookmark {
+  margin-left: 12.1vw;
+  width: 25px;
+  height: 25px;
+}

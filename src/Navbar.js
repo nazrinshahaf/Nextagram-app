@@ -50,11 +50,11 @@ const Navbar = ({
     window.location.reload();
   };
 
-  console.log(isLoggedIn);
-  console.log(localStorage.getItem("loggedInUserProfileImage"));
-  console.log(localStorage.getItem("JWT"));
-  console.log(localStorage.getItem("loggedInUserId"));
-  console.log(localStorage.getItem("loggedInUserUsername"));
+  // console.log(isLoggedIn);
+  // console.log(localStorage.getItem("loggedInUserProfileImage"));
+  // console.log(localStorage.getItem("JWT"));
+  // console.log(localStorage.getItem("loggedInUserId"));
+  // console.log(localStorage.getItem("loggedInUserUsername"));
 
   let localStorangeUserID = localStorage.getItem("loggedInUserId");
 

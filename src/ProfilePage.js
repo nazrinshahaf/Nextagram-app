@@ -10,8 +10,8 @@ const ProfilePage = () => {
   const [userImg, setUserImg] = useState([]);
 
   let loggedInUserId = localStorage.getItem("loggedInUserId");
-  console.log(userId);
-  console.log("loggedInUserID", loggedInUserId);
+  // console.log(userId);
+  // console.log("loggedInUserID", loggedInUserId);
 
   let history = useHistory();
 

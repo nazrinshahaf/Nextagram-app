@@ -35,7 +35,7 @@ const LogIn = ({
       data: { username: username, password: password }
     })
       .then(result => {
-        console.log(result.data);
+        // console.log(result.data);
 
         setLoggedInUserId(result.data.user.id);
         setIsLoggedIn(true);
