@@ -57,10 +57,12 @@ const HomePage = ({
               <ul className="LoggedInUserFriendsListParent">
                 {users.map((user, index) => (
                   <li className="LoggedInUserFriendsList" key={index}>
-                    <img
-                      src={user.profileImage}
-                      className="LoggedInUserFriendsProfileImage"
-                    ></img>
+                    <div className="LoggedInUserFriendsProfileImageContainer">
+                      <img
+                        src={user.profileImage}
+                        className="LoggedInUserFriendsProfileImage"
+                      ></img>
+                    </div>
                     <p className="LoggedInUserFriendsListUsername">
                       {user.username}
                     </p>
