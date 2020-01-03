@@ -1,24 +1,72 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Route } from "react-router-dom";
+
+import Navbar from "./Navbar";
+import HomePage from "./HomePage";
+import ProfilePage from "./ProfilePage";
+import MyProfile from "./MyProfile";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [showSignUp, setShowSignUp] = useState(false);
+  const [showLogIn, setShowLogIn] = useState(false);
+  const [showUploadImage, setShowUploadImage] = useState(false);
+
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    localStorage.getItem("JWT") !== null
+  );
+  const [loggedInUserId, setLoggedInUserId] = useState(null);
+
+  const [users, setUsers] = useState([]);
+
+  if (showSignUp === true || showLogIn === true || showUploadImage === true) {
+    document.body.style.overflow = "hidden";
+  }
+
+  if (
+    showSignUp === false &&
+    showLogIn === false &&
+    showUploadImage === false
+  ) {
+    document.body.style.overflow = "scroll";
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar
+        showSignUp={showSignUp}
+        setShowSignUp={setShowSignUp}
+        showLogIn={showLogIn}
+        setShowLogIn={setShowLogIn}
+        isLoggedIn={isLoggedIn}
+        setIsLoggedIn={setIsLoggedIn}
+        loggedInUserId={loggedInUserId}
+        setLoggedInUserId={setLoggedInUserId}
+        showUploadImage={showUploadImage}
+        setShowUploadImage={setShowUploadImage}
+      ></Navbar>
+
+      <Route exact path="/" component={HomePage}>
+        <HomePage
+          users={users}
+          setUsers={setUsers}
+          isLoading={isLoading}
+          setIsLoading={setIsLoading}
+          isLoggedIn={isLoggedIn}
+          setIsLoggedIn={setIsLoggedIn}
+        />
+      </Route>
+
+      <Route exact path="/ProfilePage/:userId" component={ProfilePage}>
+        <ProfilePage
+          setIsLoading={setIsLoading}
+          users={users}
+          setUsers={setUsers}
+        />
+      </Route>
+      <Route exact path="/MyProfile" component={MyProfile}>
+        <MyProfile />
+      </Route>
     </div>
   );
 }

@@ -1,0 +1,160 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 1;
+}
+.Sign-up-form-container {
+  position: fixed;
+  top: 18%;
+  left: calc(50% - 12.5vw);
+  background-color: white;
+  height: 65vh;
+  width: 25vw;
+  border-color: #999999;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  font-family: "Source Sans Pro", sans-serif;
+  z-index: 6;
+}
+.Sign-up {
+  margin-left: 9.5vw;
+  margin-top: 5vh;
+  font-size: 1.3em;
+  color: #333333;
+}
+.line {
+  background-color: black;
+  width: 85%;
+  height: 2px;
+  margin-left: 25px;
+  margin-top: 5px;
+}
+.Username-container {
+  width: 100%;
+  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1em;
+  margin-left: 3vw;
+}
+
+.Email-container {
+  width: 100%;
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1em;
+  margin-left: 3vw;
+}
+
+.Password-container {
+  width: 100%;
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1em;
+  margin-left: 3vw;
+}
+
+.Input-sign-up {
+  width: 18vw;
+  height: 4vh;
+  border-radius: 4px;
+  outline: none;
+  border-color: #d3d3d3;
+  border-width: 0 0 2px 0;
+  border-style: solid;
+  font-size: 0.7em;
+  padding: 0 5px 0 5px;
+  margin-top: 5px;
+}
+
+.Input-sign-up:focus {
+  outline: none;
+  box-shadow: none;
+  transition: ease-in 0.3s;
+  border-color: #3897f0;
+}
+
+.Input-sign-up.valid:focus {
+  border-color: #56d58b;
+}
+
+.Input-sign-up.invalid:focus {
+  border-color: #ed4956;
+}
+
+.Input-sign-up.weak:focus {
+  border-color: yellow;
+}
+
+.Already {
+  margin: 3.5vh 0 0 6.5vw;
+  color: #333333;
+  font-size: 1em;
+}
+
+.Button-container {
+  margin: 3.5vh 0 0 3vw;
+}
+
+.Sign-up-btn {
+  width: 8vw;
+  height: 5vh;
+  margin: 0 2.8vw 0 0;
+  border-radius: 4px;
+  cursor: pointer;
+  border-color: none;
+  border: none;
+  font-size: 0.9em;
+}
+
+.Sign-up-btn:focus {
+  outline: none;
+}
+.Sign-up-btn {
+  background-color: #3897f0;
+  color: white;
+}
+.Sign-up-btn:disabled {
+  opacity: 0.5;
+}
+
+.Cancel-btn {
+  background-color: gray;
+}
+
+.Already-sign {
+  margin: 5vh 0 0 5vw;
+}
+
+.Log-in-form-container {
+  height: 50vh;
+  top: 25%;
+}
+
+.Log-in {
+  margin-left: 10vw;
+}
+.Input-log-in {
+  margin-top: 15px;
+}
+.Button-container-Log-in {
+  margin: 5.5vh 0 0 3vw;
+}
+.error-messages-container {
+  margin: 3.5vh 0vw 0 3.1vw;
+  width: 18.5vw;
+  text-align: center;
+  line-height: 20px;
+}
+.error-messages {
+  color: #ed4956;
+  font-size: 0.9em;
+}

@@ -1,0 +1,137 @@
+.background-blackout {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 1;
+}
+.Upload-image-container {
+  position: fixed;
+  top: 12%;
+  left: calc(50% - 25vw);
+  background-color: white;
+  height: 70vh;
+  width: 50vw;
+  border-color: #999999;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  font-family: "Source Sans Pro", sans-serif;
+  z-index: 6;
+}
+
+.Upload-image-title {
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 1.3em;
+  color: #333333;
+}
+
+.Image-drop-container {
+  width: 60%;
+  height: 50%;
+  background-color: #f3f3f3;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+  margin: 5vh 0 0 10vw;
+  border-radius: 4px;
+  border-color: lightgray;
+  border-style: dashed;
+}
+.Preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.Img-icon {
+  width: 80px;
+  height: 80px;
+  padding: 14% 0 0 0;
+  opacity: 20%;
+}
+.Drag-text {
+  margin: 0 0 0 0;
+  padding: 6% 0 0 0;
+  color: #c2c2c2;
+}
+.Image-choose-container {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  margin: 2vh 0 0 10vw;
+}
+
+.Choose-image-input {
+  margin: 2vh 0 0 13.8vw;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+.Choose-image-input + label {
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  background-color: #3897f0;
+  border-radius: 4px;
+  padding: 0 10px;
+  cursor: pointer;
+  padding: 1.2vh 0.9vw;
+  font-family: "Source Sans Pro", sans-serif;
+  transition: all 0.3s;
+}
+
+.button-container {
+  margin: 2vh 0 0 10vw;
+}
+
+.Cancel-btn2 {
+  width: 8vw;
+  height: 5vh;
+  margin: 0 0vw 0 0;
+  border-radius: 4px;
+  cursor: pointer;
+  border-color: none;
+  border: none;
+  font-size: 0.9em;
+  background-color: gray;
+  color: white;
+  transition: all 0.3s;
+}
+.Cancel-btn2:hover {
+  background-color: #ed4956;
+}
+.Cancel-btn2:focus {
+  outline: none;
+}
+.Selected-image-name {
+  text-align: center;
+  width: 100%;
+}
+.Selected-image-name p {
+  margin: 2vh 0 0 0;
+}
+.delete-btn {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  top: 24%;
+  cursor: pointer;
+  left: 34.5%;
+  border: none;
+  transition: all 0.3s;
+  background-color: white;
+}
+.delete-btn:hover {
+  background-color: #ed4956;
+}
+
+.delete-btn:focus {
+  outline: none;
+}

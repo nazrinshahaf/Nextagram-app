@@ -1,0 +1,148 @@
+.ListContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+}
+.UserList {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15vh 0 0 0;
+  padding: 0;
+}
+
+.UserList li {
+  width: 80vw;
+  height: 70vh;
+  padding: 0vh 2vh 2vh 2vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3vh;
+}
+
+.UserListContainer {
+  padding: 4vh 0vh 0vh 0vh;
+  border-color: lightgray;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  /* width: 55vw; */
+  width: 35vw;
+  height: 60vh;
+  position: relative;
+  background-color: white;
+}
+
+.UserProfileImageContainer {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 2.5%;
+  left: 3%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to top right, orange 25%, purple 75%);
+}
+.UserProfileImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  align-self: center;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+}
+.UserName {
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  font-size: 0.8em;
+  font-family: "Source Sans Pro", sans-serif;
+  text-decoration: none;
+}
+.UserName:hover,
+.UserName:visited,
+.UserName:focus,
+.UserName:active {
+  text-decoration: none;
+}
+
+.DotContainer {
+  position: absolute;
+  right: 4%;
+  top: 5%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+.Dots {
+  height: 3px;
+  width: 3px;
+  margin: 1.5px;
+  border-radius: 50%;
+  background-color: #383838;
+}
+.UserImage {
+  width: 100%;
+  height: 61%;
+  position: absolute;
+  top: 11.5%;
+  left: 0%;
+  object-fit: cover;
+}
+.UserProfileImage:hover {
+  cursor: pointer;
+}
+.ProfileBar {
+  width: 100%;
+  height: 16%;
+  position: absolute;
+  bottom: 11.5%;
+  border-bottom-color: lightgray;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.a,
+.a:hover,
+.a:visited,
+.a:link,
+.a:active,
+.a:focus {
+  text-decoration: none;
+  color: black;
+}
+
+.Comment-section {
+  width: 100%;
+  height: 11.8%;
+  position: absolute;
+  bottom: 0%;
+}
+.Comment-section-input {
+  border-width: 0px;
+  padding: 0;
+  margin: 1px 0 0 0;
+  height: 98%;
+  width: 80%;
+  padding-left: 20px;
+}
+.Comment-section-input:focus {
+  outline: none;
+}
+.Comment-section-input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.Post-comment-btn {
+  border: none;
+  padding: 0;
+  margin: 0 0 0 2.5vw;
+  color: #3897f0;
+}
+.Post-comment-btn:hover {
+  cursor: pointer;
+}
