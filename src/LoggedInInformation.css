@@ -7,7 +7,6 @@
   font-family: "Source Sans Pro", sans-serif;
 }
 .LoggedInUserImageContainer {
-  /* background-color: green; */
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -42,7 +41,7 @@
   height: 20vh;
   width: 100%;
   border-radius: 4px;
-  margin: 50px 0 0 0;
+  margin: 3vh 0 0 0;
 }
 .LoggedInUserFriendsHeader {
   display: flex;
@@ -58,10 +57,30 @@
   cursor: pointer;
 }
 .LoggedInUserFriends {
-  overflow: scroll;
+  overflow-y: scroll;
   height: 34vh;
   width: 100%;
 }
+
+.LoggedInUserFriends::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+.LoggedInUserFriends::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.LoggedInUserFriends::-webkit-scrollbar-thumb {
+  background: #c2c2c2;
+}
+
+/* Handle on hover */
+.LoggedInUserFriends::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+
 .LoggedInUserFriendsProfileImage {
   width: 40px;
   height: 40px;

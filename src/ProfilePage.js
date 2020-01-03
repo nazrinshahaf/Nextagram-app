@@ -55,27 +55,35 @@ const ProfilePage = () => {
             <div className="ProfilePageFollowers">
               <h2 className="ProfilePageUserName">{user.username}</h2>
 
-              <div className="ProfilePageFollowButton">Follow</div>
-
-              {/* <div className="ProfilePageDropDown">
-                <div className="triangle"></div>
-              </div> */}
-              <div className="ProfilePageProfileInfo">
-                <p> XXXX post</p>
-                <p> XXXX followers</p>
-                <p> XXXX following</p>
+              {loading === true ? (
+                <div></div>
+              ) : (
+                <div className="ProfilePageFollowButton">Follow</div>
+              )}
+              {loading === true ? (
+                <div></div>
+              ) : (
+                <div className="ProfilePageProfileInfo">
+                  <p> XXXX post</p>
+                  <p> XXXX followers</p>
+                  <p> XXXX following</p>
+                </div>
+              )}
+            </div>
+            {loading === true ? (
+              <div></div>
+            ) : (
+              <div className="ProfilePageDescription">
+                <p>
+                  HelloHello Hello Hello Hello Hello Hello Hello Hello Hello
+                  HelloHelloHello Hello Hello Hello Hello Hello Hello Hello
+                  Hello HelloHelloHello Hello Hello Hello Hello Hello Hello
+                  Hello Hello HelloHelloHello Hello Hello Hello Hello Hello
+                  Hello Hello Hello HelloHelloHello Hello Hello Hello Hello
+                  Hello Hello Hello Hello Hello
+                </p>
               </div>
-            </div>
-            <div className="ProfilePageDescription">
-              <p>
-                HelloHello Hello Hello Hello Hello Hello Hello Hello Hello
-                HelloHelloHello Hello Hello Hello Hello Hello Hello Hello Hello
-                HelloHelloHello Hello Hello Hello Hello Hello Hello Hello Hello
-                HelloHelloHello Hello Hello Hello Hello Hello Hello Hello Hello
-                HelloHelloHello Hello Hello Hello Hello Hello Hello Hello Hello
-                Hello
-              </p>
-            </div>
+            )}
           </div>
         </div>
       </div>

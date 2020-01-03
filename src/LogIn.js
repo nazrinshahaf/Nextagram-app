@@ -43,6 +43,7 @@ const LogIn = ({
         setShowLogIn(false);
 
         alert(`Welcome back ${username}!`);
+        window.location.reload();
 
         localStorage.setItem("loggedInUserId", result.data.user.id);
         localStorage.setItem("JWT", result.data.auth_token);
@@ -59,6 +60,7 @@ const LogIn = ({
         console.log("Error ", error.response);
         setLoading(false);
         setErrorMessage("Wrong password or username");
+        setPassword("");
       });
   };
 

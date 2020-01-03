@@ -11,6 +11,7 @@ const UploadImg = ({ showUploadImage, setShowUploadImage }) => {
   let JWT = localStorage.getItem("JWT");
 
   let formData = new FormData();
+
   formData.append("image", userImageUpload);
 
   const HandleCancel = () => {
@@ -24,8 +25,11 @@ const UploadImg = ({ showUploadImage, setShowUploadImage }) => {
   };
   const HandleImage = e => {
     setUserImageUpload(e.target.files[0]);
+
     setPreviewImage(URL.createObjectURL(e.target.files[0]));
+
     setUserImageName(e.target.files[0].name);
+
     e.target.value = "";
   };
 
@@ -37,7 +41,7 @@ const UploadImg = ({ showUploadImage, setShowUploadImage }) => {
         .then(result => {
           console.log(result.data);
           setUserImageName("");
-          console.log("image Uploaded Succesfully");
+          alert("image Uploaded Succesfully");
           setUserImageName("");
           setPreviewImage(null);
           setUserImageUpload(null);

@@ -11,6 +11,7 @@ function App() {
   const [showSignUp, setShowSignUp] = useState(false);
   const [showLogIn, setShowLogIn] = useState(false);
   const [showUploadImage, setShowUploadImage] = useState(false);
+  const [showCommentSection, setShowCommentSection] = useState(false);
 
   const [isLoggedIn, setIsLoggedIn] = useState(
     localStorage.getItem("JWT") !== null
@@ -54,6 +55,8 @@ function App() {
           setIsLoading={setIsLoading}
           isLoggedIn={isLoggedIn}
           setIsLoggedIn={setIsLoggedIn}
+          showCommentSection={showCommentSection}
+          setShowCommentSection={setShowCommentSection}
         />
       </Route>
 

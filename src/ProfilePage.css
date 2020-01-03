@@ -26,6 +26,13 @@
   border-radius: 50%;
   margin-top: 12.5%;
 }
+.ProfilePageUserImgContainerLoggedIn {
+  position: relative;
+  width: 182px;
+  height: 182px;
+  border-radius: 50%;
+  margin-top: 12.5%;
+}
 .ProfilePageUserImg {
   position: absolute;
   width: 175px;
@@ -126,4 +133,19 @@
   height: 400px;
   object-fit: cover;
   cursor: pointer;
+}
+.Profile-page-edit-profile-btn {
+  background-color: #fafafa;
+  color: black;
+  border-width: 1px;
+  border-color: lightgray;
+  border-style: solid;
+  width: 95px;
+}
+.Profile-page-edit-profile-btn:focus {
+  background-color: #3897f0;
+}
+
+.Profile-page-edit-profile-btn:active {
+  background-color: #3897f0;
 }

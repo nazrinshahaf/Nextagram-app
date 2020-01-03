@@ -40,7 +40,7 @@ const MyProfile = () => {
       <div className="ProfilePageBody">
         <div className="ProfilePageHeader">
           <div className="ProfilePageProfileImageContainer">
-            <div className="ProfilePageUserImgContainer">
+            <div className="ProfilePageUserImgContainerLoggedIn">
               <img
                 src={loggedInUserProfileImage}
                 className="ProfilePageUserImg"
@@ -50,7 +50,9 @@ const MyProfile = () => {
           <div className="ProfilePageContent">
             <div className="ProfilePageFollowers">
               <h2 className="ProfilePageUserName">{loggedInUserUsername}</h2>
-              <div className="ProfilePageFollowButton">Settings</div>
+              <div className="ProfilePageFollowButton Profile-page-edit-profile-btn">
+                Edit Profile
+              </div>
               <div className="ProfilePageProfileInfo">
                 <p> XXXX post</p>
                 <p> XXXX followers</p>

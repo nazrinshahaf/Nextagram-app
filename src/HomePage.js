@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 
 import UserImages from "./UserImages";
 import LoadingCircle from "./LoadingCircle";
+import UserComment from "./UserComment";
+
+import LikeIcon from "./like_icon2.png";
+import CommentIcon from "./comment_icon.png";
 
 import "./HomePage.css";
 import "./LoggedInInformation.css";
@@ -14,7 +18,9 @@ const HomePage = ({
   setIsLoading,
   isLoading,
   isLoggedIn,
-  setIsLoggedIn
+  setIsLoggedIn,
+  setShowCommentSection,
+  showCommentSection
 }) => {
   let loggedInUserProfileImage = localStorage.getItem(
     "loggedInUserProfileImage"
@@ -42,15 +48,19 @@ const HomePage = ({
       {isLoggedIn ? (
         <div className="LoggedInInformation">
           <div className="LoggedInUserImageContainer">
-            <img
-              src={loggedInUserProfileImage}
-              className="LoggedInUserImage"
-            ></img>
-            <p className="LoggedInUserUsername">{loggedInUserUsername}</p>
+            <Link exact to={`/MyProfile`}>
+              <img
+                src={loggedInUserProfileImage}
+                className="LoggedInUserImage"
+              ></img>
+            </Link>
+            <Link exact to={`/MyProfile`}>
+              <p className="LoggedInUserUsername">{loggedInUserUsername}</p>
+            </Link>
           </div>
           <div className="LoggedInUserFriendStories">
             <div className="LoggedInUserFriendsHeader">
-              <p className="Stories-title">Stories</p>
+              <p className="Stories-title">Friends</p>
               <p className="Watch-all-title">Watch All</p>
             </div>
             <div className="LoggedInUserFriends">
@@ -61,10 +71,12 @@ const HomePage = ({
                       className="LoggedInUserFriendsProfileImageContainer"
                       style={{ background: isLoading === true ? "none" : "" }}
                     >
-                      <img
-                        src={user.profileImage}
-                        className="LoggedInUserFriendsProfileImage"
-                      ></img>
+                      <Link exact to={`/ProfilePage/${user.id}`}>
+                        <img
+                          src={user.profileImage}
+                          className="LoggedInUserFriendsProfileImage"
+                        ></img>
+                      </Link>
                     </div>
                     <Link exact to={`/ProfilePage/${user.id}`}>
                       <p className="LoggedInUserFriendsListUsername">
@@ -76,7 +88,7 @@ const HomePage = ({
               </ul>
             </div>
           </div>
-          <div className="LoggedInUserSuggestedFriends"></div>
+          {/* <div className="LoggedInUserSuggestedFriends"></div> */}
         </div>
       ) : (
         <div></div>
@@ -102,12 +114,18 @@ const HomePage = ({
                   <div className="Dots"></div>
                 </div>
                 <UserImages className="UserImage" usersId={user.id} />
-                <div className="ProfileBar"></div>
+                <div className="ProfileBar">
+                  <img
+                    src={LikeIcon}
+                    className="Comment-section-like-icon"
+                  ></img>
+                  <img
+                    src={CommentIcon}
+                    className="Comment-section-comment-icon"
+                  ></img>
+                </div>
                 <div className="Comment-section">
-                  <input
-                    className="Comment-section-input"
-                    placeholder="Add a comment..."
-                  ></input>
+                  <UserComment></UserComment>
                   <button className="Post-comment-btn">Post</button>
                 </div>
               </div>
