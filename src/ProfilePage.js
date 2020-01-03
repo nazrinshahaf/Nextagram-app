@@ -44,7 +44,10 @@ const ProfilePage = () => {
       <div className="ProfilePageBody">
         <div className="ProfilePageHeader">
           <div className="ProfilePageProfileImageContainer">
-            <div className="ProfilePageUserImgContainer">
+            <div
+              className="ProfilePageUserImgContainer"
+              style={{ background: loading === true ? "none" : "" }}
+            >
               <img src={user.profileImage} className="ProfilePageUserImg"></img>
             </div>
           </div>
